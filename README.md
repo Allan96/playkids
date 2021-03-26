@@ -1,5 +1,8 @@
 # PlayFood
-
+## Para clonar o repositório
+```
+git clone https://github.com/Allan96/playkids.git
+```
 ## Instalar as dependencias do projeto
 ```
 npm install ou npm i
