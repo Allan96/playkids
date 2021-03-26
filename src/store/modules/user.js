@@ -3,6 +3,13 @@ export default {
     state: {
         name: null,
     },
-    mutations: {},
+    mutations: {
+        clear(state) {
+            state.name = null
+        },
+        setName(state, name) {
+            state.name = name
+        },
+    },
     actions: {}
 }

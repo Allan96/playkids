@@ -1,0 +1,71 @@
+@media screen and (min-width: $xs) {
+    * {
+        box-sizing: border-box;
+    }
+    .pointer {
+        cursor: pointer;
+    }
+    a {
+        color: currentColor;
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            color: currentColor;
+        }
+    }
+     ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+     ::-webkit-scrollbar {
+        width: 6px;
+        background-color: transparent;
+    }
+     ::-webkit-scrollbar-thumb {
+        background-color: $purple;
+        border-radius: 57px;
+    }
+    body {
+        overflow-x: hidden;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        margin: 0;
+        font-size: 14px;
+        color: #727D94;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+    .container {
+        width: 100%;
+        padding-right: 16px;
+        padding-left: 16px;
+        margin: 0 auto;
+    }
+    main {
+        margin-top: 48px;
+    }
+    #sidebar {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $sm) {}
+
+@media screen and (min-width: $md) {}
+
+@media screen and (min-width: $lg) {}
+
+@media screen and (min-width: $xl) {
+    main {
+        display: grid;
+        grid-template-columns: 300px auto;
+    }
+    #sidebar {
+        display: block;
+    }
+    .container {
+        max-width: 1480px;
+    }
+}

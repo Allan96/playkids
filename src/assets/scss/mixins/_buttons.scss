@@ -1,0 +1,52 @@
+@mixin Button($class, $background, $hover) {
+    .btn-#{$class} {
+        background-color: $background!important;
+        color: white!important;
+        transition: .2s;
+        border-bottom: 2px solid $hover;
+        &:hover {
+            background-color: $hover!important;
+            outline: none;
+        }
+        &:focus {
+            box-shadow: 0!important;
+            outline: none;
+        }
+        &:active {
+            background-color: $hover!important;
+            box-shadow: 0!important;
+            outline: none;
+        }
+    }
+}
+
+@mixin ButtonOutline($class, $border, $hover) {
+    .btn-outline-#{$class} {
+        border: 1px solid $border!important;
+        color: $border!important;
+        transition: .2s;
+        background: transparent;
+        &:hover {
+            background-color: $hover!important;
+            color: white!important;
+            outline: none;
+        }
+        &:focus {
+            background-color: $hover!important;
+            color: white!important;
+            box-shadow: 0!important;
+            outline: none;
+        }
+        &:active {
+            background-color: $hover!important;
+            color: white!important;
+            background-color: $hover!important;
+            box-shadow: 0!important;
+            outline: none;
+        }
+    }
+}
+
+//PRIMARY
+@include Button('default', $purple, $purple-dark);
+@include ButtonOutline('default', $purple, $purple-dark);

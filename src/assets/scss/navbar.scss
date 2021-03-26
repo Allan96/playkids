@@ -1,0 +1,47 @@
+nav {
+    padding: 20px 0;
+    border-bottom: 2px solid #DFE2EB;
+    &.navbar {
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar-logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 24px;
+            color: $purple;
+        }
+        .create-order {
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 16px;
+                fill: #727D94;
+            }
+        }
+        .my-orders {
+            margin-right: 8px;
+        }
+        .logout {
+            margin-left: 24px;
+        }
+        .area-client {
+            background: #dfe2eb67;
+            border: 2px solid transparent;
+            padding: 6px 24px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            svg {
+                margin-right: 8px;
+                fill: #727D94;
+            }
+            &:hover {
+                background: transparent;
+                border-color: #dfe2eb67;
+            }
+        }
+    }
+}

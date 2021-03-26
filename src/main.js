@@ -7,6 +7,9 @@ import store from '@/store';
 
 import App from '@/App.vue'
 
+import formatMoney from '@/filters/formatMoney'
+Vue.use(formatMoney)
+
 Vue.config.productionTip = false
 
 new Vue({
