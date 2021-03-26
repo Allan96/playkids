@@ -7,6 +7,12 @@
 ```
 git clone https://github.com/Allan96/playkids.git
 ```
+
+## Ir para a pasta do projeto
+```
+cd playkids
+``` 
+
 ## Instalar as dependencias do projeto
 ```
 npm install ou npm i
