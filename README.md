@@ -29,8 +29,5 @@ npm run build
 ```
 
 ### Teste feito para a vaga de FrontEnd da PlayKids
-```
-npm run build
-```
 
 
