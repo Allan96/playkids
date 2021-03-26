@@ -1,24 +1,23 @@
-# playkids
+# PlayFood
 
-## Project setup
+## Instalar as dependencias do projeto
 ```
-npm install
+npm install ou npm i
 ```
 
-### Compiles and hot-reloads for development
+### Rodar localmente o projeto
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Buildar para produção
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Teste feito para a vaga de FrontEnd da PlayKids
 ```
-npm run lint
+npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
