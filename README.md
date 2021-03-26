@@ -1,4 +1,7 @@
 # PlayFood
+## Para ver o projeto em produção acesse:
+[PlayFood]: https://playfood-com-br.umbler.net/
+
 ## Para clonar o repositório
 ```
 git clone https://github.com/Allan96/playkids.git
