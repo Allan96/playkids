@@ -6,7 +6,7 @@ const identificationRouter = {
     path: '/identification',
     component: IdentificationPage,
     meta: {
-        title: 'Cashforce | Identificação!',
+        title: 'PlayFood | Identificação',
         requiresAuth: false
     }
 }

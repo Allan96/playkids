@@ -8,7 +8,7 @@ const ordersRouter = {
     path: '/orders',
     component: IndexOrder,
     meta: {
-        title: 'Cashforce | Meus pedidos',
+        title: 'PlayFood | Meus pedidos',
         requiresAuth: false
     },
     children: [{
