@@ -45,3 +45,29 @@ nav {
         }
     }
 }
+
+@media screen and (min-width: $xs) {
+    nav {
+        &.navbar {
+            .container {
+                flex-direction: column;
+                .create-order {
+                    margin-top: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $lg) {
+    nav {
+        &.navbar {
+            .container {
+                flex-direction: row;
+                .create-order {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
