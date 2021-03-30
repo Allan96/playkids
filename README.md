@@ -28,6 +28,11 @@ npm run serve
 npm run build
 ```
 
+### Para rodar os testes unitários
+```
+npm run test:unit
+```
+
 ### Teste feito para a vaga de FrontEnd da PlayKids
 
 
