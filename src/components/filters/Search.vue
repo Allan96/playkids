@@ -1,6 +1,6 @@
 <template>
 <div id="search">
-    <input type="text" placeholder="Busque por um produto" v-model="filterSearch">
+    <input type="text" placeholder="Busque por um produto em nossa loja" v-model="filterSearch">
 </div>
 </template>
 
@@ -22,13 +22,8 @@ export default {
 
 <style lang="scss" scoped>
 #search {
-    margin-top: 48px;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-
-    input {
-        width: 500px;
-    }
+    grid-area: search;
+    max-width: 100%;
+    width: 300px;
 }
 </style>

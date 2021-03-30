@@ -10,7 +10,7 @@
         <ProductResume :changeAmount="false" v-for="(product, index)  in productsWithType('drink')" v-bind:key="index" :product="product" />
         <div>
             <h3>
-                Total:
+                Total do pedido:
                 R$ {{ totalProductsCart() | formatMoney }}
             </h3>
 

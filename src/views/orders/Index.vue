@@ -1,6 +1,6 @@
 <template>
 <div>
-    <Navbar :createOrder="!$store.state.user.name" />
+    <Navbar :createOrder="!$store.state.user.name" :searchVisible="false" />
 
     <router-view></router-view>
 </div>

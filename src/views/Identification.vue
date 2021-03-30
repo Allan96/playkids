@@ -1,7 +1,15 @@
 <template>
 <div>
-    <Navbar :createOrder="false" />
-    <div class="container">
+    <Navbar :searchVisible="false" />
+    <Header :createOrder="false">
+        <h1>
+            Peça sua comida em minutos.
+        </h1>
+        <h3 class="regular">
+            Temos diversos tipos de comidas e bebidas. Criou, finalizou, chegou.
+        </h3>
+    </Header>
+    <div id="content-login" class="container">
         <div id="login">
             <h1>
                 Fazer login
@@ -22,9 +30,11 @@
 
 <script>
 import Navbar from '@/components/navigation/Navbar.vue'
+import Header from '@/components/header/Header.vue'
 export default {
     components: {
         Navbar,
+        Header
     },
     data() {
         return {
@@ -50,12 +60,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/var.scss';
+
+#content-login {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+}
+
 #login {
+    grid-area: login;
     text-align: center;
-    max-width: 100%;
-    width: 500px;
-    margin: 0 auto;
-    margin-top: 50px;
     position: relative;
 
     h1 {
@@ -63,16 +80,29 @@ export default {
     }
 
     .btn {
-        max-width: 100%;
-        width: 500px;
         justify-content: center;
         margin: 16px 0 0 0;
+        width: 100%;
     }
 
     .error {
         margin-top: 16px;
         display: inline-block;
         color: rgba(255, 0, 0, 0.788);
+    }
+}
+
+@media screen and (min-width: $xs) {
+    #content-login {
+        grid-template-areas:
+            'login login login login login login';
+    }
+}
+
+@media screen and (min-width: $lg) {
+    #content-login {
+        grid-template-areas:
+            '. . login login . .';
     }
 }
 </style>

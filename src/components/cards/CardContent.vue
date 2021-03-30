@@ -1,32 +1,23 @@
 <template>
-<div id="content">
+<div class="card-content">
     <div class="card" v-if="productsFiltered.length">
         <CardProduct v-for="(product, index)  in productsFiltered" v-bind:key="index" :product="product" />
     </div>
-    <div class="not-found" v-else>
-
-        <NotFound />
-        <h2>
-            Não conseguimos encontrar nenhum produto com esse nome
-        </h2>
-        <p>
-            Não foi encontrado nenhum resultado de acordo com a sua busca. Tente novamente!
-        </p>
-    </div>
+    <NotFound v-else />
 </div>
 </template>
 
 <script>
 import getProducts from '@/api/getProducts'
 import CardProduct from '@/components/cards/CardProduct.vue'
-import NotFound from '@/components/icons/NotFound.vue'
+import NotFound from '@/components/notFound/NotFound.vue'
 export default {
     components: {
         CardProduct,
         NotFound
     },
 
-    async created() {
+    async mounted() {
         await getProducts()
     },
     computed: {
@@ -44,24 +35,15 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/var.scss';
 
-.card {
+.card-content {
+    grid-area: content;
     display: grid;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
-    margin: 0 0 24px 0;
-}
 
-.not-found {
-    text-align: center;
-    color: #6E1EA0;
-    margin: 150px 0;
-
-    h2 {
-        margin: 16px 0 8px 0;
-    }
-
-    svg {
-        fill: #6E1EA0;
+    .card {
+        display: grid;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        margin: 0 0 24px 0;
     }
 }
 
