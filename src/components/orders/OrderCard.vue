@@ -1,16 +1,17 @@
 <template>
-<div class="order-card">
+<router-link class="order-card" :to="`orders/details/${order.id}`">
     <h3>PlayFood</h3>
     <span class="order-id">
         #{{ order.orderNumber }}
     </span>
-    Items comprados: {{ order.products.length }}
-    <router-link :to="`orders/details/${order.id}`">
-        <button class="btn btn-default">
-            Ver detalhes do pedido
-        </button>
-    </router-link>
-</div>
+    <span v-for="(product, index)  in order.products.slice(0, 5)" v-bind:key="index">
+        {{ product.name }} x {{ product.amount }} <br>
+    </span>
+    <br>
+    {{ order.products.length }} items comprados
+    <br>
+    <b>Valor do pedido: R$ {{ totalProductsCart() | formatMoney }} </b>
+</router-link>
 </template>
 
 <script>
@@ -19,6 +20,14 @@ export default {
         order: {
             default: []
         }
+    },
+    methods: {
+        totalProductsCart() {
+            var totalCart = this.order.products.reduce((sum, product) => {
+                return sum + (product.amount * product.price);
+            }, 0);
+            return totalCart;
+        },
     }
 
 }
@@ -43,13 +52,14 @@ export default {
             font-size: 12px;
             display: block;
             position: absolute;
-            bottom: 12px;
+            top: 10px;
             right: 21px;
         }
     }
 
     .btn {
         margin-top: 24px;
+        padding: auto 0;
     }
 
     &:hover {

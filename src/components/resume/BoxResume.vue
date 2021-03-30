@@ -1,5 +1,8 @@
 <template>
 <div id="resume" v-show="$store.state.cart.cartOpen">
+    <div class="other-resume" @click="closeBox">
+
+    </div>
     <div class="box-resume">
         <div>
             <div class="header">
@@ -85,6 +88,14 @@ export default {
     width: 100vw;
     min-height: 100vh;
     background: #0000005e;
+    z-index: 5;
+    .other-resume {
+        top: 0;
+        position: absolute;
+        left: -500px;
+        width: 100vw;
+        height: 100%;
+    }
 
     .box-resume {
         overflow: auto;

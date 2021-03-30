@@ -43,9 +43,6 @@
         padding-left: 16px;
         margin: 0 auto;
     }
-    main {
-        margin-top: 48px;
-    }
     #sidebar {
         display: none;
     }
@@ -58,10 +55,6 @@
 @media screen and (min-width: $lg) {}
 
 @media screen and (min-width: $xl) {
-    main {
-        display: grid;
-        grid-template-columns: 300px auto;
-    }
     #sidebar {
         display: block;
     }
