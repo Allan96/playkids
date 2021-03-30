@@ -14,8 +14,5 @@ describe('Login.vue', () => {
         await wrapper.vm.$nextTick();
         jest.runTimersToTime(2000)
         expect(wrapper.find('.error').text()).toEqual('Insira um nome válido')
-
-
-
     })
 })
